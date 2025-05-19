@@ -1,0 +1,34 @@
+.num-2 ~ li {
+   background: red;
+}
+
+body {
+   height: 300px;
+}
+
+.nth > li:first-child {
+   background: yellow;
+}
+.nth > li:last-child {
+   background: green;
+}
+.nth > li:nth-child(odd) {
+   background: blue;
+}
+.nth > li:nth-child(even) {
+   background: green;
+}
+
+
+/* 속성 선택자 */
+input[type="text"] {
+   background: #999;
+}
+
+input[placeholder="이름"] {
+   background: purple;
+}
+
+.nth > li:not(:last-child) {
+   color: blueviolet;
+}

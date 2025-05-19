@@ -1,0 +1,61 @@
+/*
+   1. animation-name : 애니메이션 keyframes와 연결할 이름
+   2. animation-delay : 애니메이션 실행을 특정 시간동안 지연시켜준다.
+
+
+   3. animation-fill-mode : 애니메이션 실행 후 속성이 지속되게 한다(forwards 적용 시)
+   4. animation-iterati
+on-count : 애니메이션 실행 횟수 지정
+   5. animation-direction : 애니메이션 변화 후 변화 이전으로 자동 계산하여 실행(alternate 적용 시)
+   6. animation-duration : 애니메이션 지속 시간 지정
+*/
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+div {
+   width: 500px;
+   height: 500px;
+   padding: 50px;
+   border: 1px solid;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+div p {
+   width: 200px;
+   height: 200px;
+   background-color: red;
+   border-radius: 0;
+
+   /* 크기 200px -> 300px 색상 red -> yellow로 변형되는 애니메이션 */
+   /* animation-delay: 0.3s;
+   animation-iteration-count: infinite;
+   animation-duration: 1s;
+   animation-name: example;
+   animation-direction: alternate;
+   animation-fill-mode: forwards; */
+
+   /* 축약형 */
+   animation: example 1s 0.3s infinite alternate forwards;
+} /* 애니메이션 속도 등을 결정 */
+
+@keyframes example {
+   0%{
+      width: 200px;
+      height: 200px;
+      background: red;
+      border-radius: 0;
+   } /* 2프레임일 경우 from으로 대체 가능 */
+   100% {
+      width: 300px;
+      height: 300px;
+      background: yellow;
+      border-radius: 50%;
+   } /* 2프레임일 경우 to로 대체 가능 */
+}

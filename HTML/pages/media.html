@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <!-- - 이미지
+      1. 사진의 크기 지정을 안하면 원래 사이즈의 사진이 구현된다.
+      2. 사진의 사이즈를 지정할 때는 가로나 세로 중 하나만 지정한다.
+      3. alt는 사진의 정보를 제공하고, 특히 사진의 설명을 음성으로 알려줄 때 사용된다.
+         따라서 사용 안 할 경우 웹접근성점수가 떨어진다.
+      4. 이미지는 별도의 독립적 사용 보다는 감싸는 구획 태그를 사용한다.
+     -->
+    <div class="ive">
+        <div class="title">아이브</div>
+        <div class="image">
+            <img src="/sample/ive.jpg" alt="아이브">
+        </div>
+    </div>
+
+    <div class="vid">
+        <div class="title">나이키</div>
+        <div class="vid-box">
+            <video autoplay muted controls loop>
+                <source src="/images/main_page/nike.mp4">
+            </video>
+        </div>
+    </div>
+
+    <style>
+        .ive {
+            width: 500px;
+            margin: auto;
+        }
+
+        .ive .title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .ive .image {
+            width: 500px;
+            text-align: center;
+        }
+
+        .ive img{
+            width:100%;
+        }
+    </style>
+</body>
+</html>
